@@ -5,14 +5,14 @@ class Conteudo extends React.Component{
     render(){
         let conteudo = this.props.conteudos.map(function(value){
             return(
-                <div className="card">
+                <div className="card shadow">
                         <a href={value.link}>
                             <div className="card-image waves-effect waves-block waves-light">
                             <img className="activator" src={value.img}/>
                             </div>
 
-                            <div className="card-content">
-                                <span className="card-title activator grey-text text-darken-4">{value.tituloBloco}<i class=""></i></span>
+                            <div className="card-content black">
+                                <span className="card-title activator white-text text-darken-4">{value.tituloBloco}<i class=""></i></span>
                                 <p>{value.texto}</p>
                             </div>
                         </a>
