@@ -2,33 +2,40 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class Conteudo extends React.Component{
-    render(){
-        let conteudo = this.props.conteudos.map(function(value){
-            return(
-                <div className="card shadow">
-                        <a href={value.link}>
-                            <div className="card-image waves-effect waves-block waves-light">
-                            <img className="activator" src={value.img}/>
-                            </div>
-
-                            <div className="card-content black">
-                                <span className="card-title activator white-text text-darken-4">{value.tituloBloco}<i class=""></i></span>
-                                <p>{value.texto}</p>
-                            </div>
-                        </a>
-                </div>
-                
-            );
-        });
-
+render(){
+    let conteudo = this.props.conteudos.map(function(value){
         return(
+          
+          <div className="col s4 m4">
+            <div className="card">
+              <div className="card-image">
+                <img src={value.img}/>
+                <span className="card-title">`{value.title}</span>
+              </div>
+              <div className="card-content">
+                <p>{value.texto}</p>
+              </div>
+              <div className="card-action">
+                
+              </div>
+            </div>
+          </div>
+
             
-                <div>
-                    {conteudo}
-                </div>
             
-        )
-    }
+             
+                        
+        );
+    });
+
+    return(
+        
+            <div>
+                {conteudo}
+            </div>
+        
+    )
+}
 }
 
 

@@ -36,3 +36,7 @@ h1{
   color:red;
 }
    */
+
+.linhaConteudo{
+  display: inline-block;
+}
