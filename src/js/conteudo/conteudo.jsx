@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 
 class Conteudo extends React.Component{
 render(){
-    let conteudo = this.props.conteudos.map(function(value){
+    let conteudo = this.props.conteudos.map(function(value){  
         return(
           
-          <div className="col s4 m4">
-            <div className="card">
+          <div className="col s4 m4 conteudo">
+            <div className="card z-depth-4">
               <div className="card-image">
-                <img src={value.img}/>
+                <img src={value.img} alt={value.alt}/>
                 <span className="card-title">`{value.title}</span>
               </div>
               <div className="card-content">

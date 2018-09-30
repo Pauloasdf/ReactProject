@@ -5,31 +5,46 @@ import './App.css';
 
 import Titulo from './js/titulo/titulo';
 import Navbar from './js/navbar/navbar';
-import Head from './js/head/head';
+//import Head from './js/head/head';
 import Banner from './js/conteudo/banner';
 
 import BlocoConteudo from './js/conteudo/bloco-conteudo';
-let style = "display:inline-block";
+
+
 let App = (
-     
-        <div>
-          <Head/>
-          <Navbar titulo="SyoLearn" cor="red" />
-          <div className="container">
-            <Titulo titulo="Home"/>
+        
+        // <div>
+         
+        //   <Navbar titulo="SyoLearn" cor="red" />
+        //   <div className="container">
+        //     <Titulo titulo="Home"/>
 
+            
+        //     <Banner />
+          
+        //     <BlocoConteudo />
 
-            <Banner />
+        //     </div>
+
+        //   </div>
+        
+  <div>
+        <Navbar titulo="SyoLearn" cor="red" />
+        {/* <Titulo titulo="Home"/> */}
+        
+        <div class="row">
+    
+          <div class="col s2">
             
-            
-            <BlocoConteudo />
-            <BlocoConteudo />
-            <BlocoConteudo />
-            
-      
-      
           </div>
+    
+          <div class="col s10 pagina_central">
+          <Banner />
+          <BlocoConteudo />
+          </div>
+    
         </div>
+  </div>
 );
 
 ReactDOM.render(App, document.getElementById('root'));

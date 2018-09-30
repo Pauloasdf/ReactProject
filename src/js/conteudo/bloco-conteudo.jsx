@@ -1,36 +1,51 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 
 import Conteudo from './conteudo';
 
 class BlocoConteudo extends React.Component{
     render(){
         let conteudos = [
-            {
-            img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",
-            tituloBloco:"Primeiro Cartão",
-            texto:"Realmente este lugar é muito acolchegante.",
-            link:"#1"
-            },
-                // {
-                // img : "https://uploads.spiritfanfics.com/fanfics/historias/201612/aleatorias-aleatorias-7540241-311220162235.png",
-                // tituloBloco:"Second Cartão",
-                // texto:"Este lugar já não parece tão bom assim.",
-                // link:"#2"
-                // },
-                // {
-                // img : "https://static.noticiasaominuto.com.br/stockimages/1920/naom_5b38be2d748ce.jpg",
-                // tituloBloco:"Terceiro Cartão",
-                // texto:"Talvez este seja ainda melhor que o primeiro",
-                // link:"#3"
-                // }
-            
-        ]
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#1",alt:"",},
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#2",alt:"",},
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#3",alt:"",},
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#4",alt:"",},
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#5",alt:"",},
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#6",alt:"",},
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#7",alt:"",}
+            ];
+        
+          // Declaração de variáveis 
+
+            var auxiliar = [];
+            var novaLinha = [];
+
+          // ---------------------
+          // Laço gerar os cartoes e fazer a quebra de linha
+
+            for(let k=0;k<conteudos.length;k++){
+                auxiliar.push(conteudos[k]);
+
+                if (auxiliar.length === 4){ // se por ventura quisermos mudar a quantidade de cartões por linhas alterar este número aq
+                    novaLinha.push(auxiliar);
+                    auxiliar = [];
+                }else if(k === conteudos.length -1){
+                    novaLinha.push(auxiliar);
+                }
+
+            }
+          // -----------------------------------------------
+        
+            console.log(novaLinha);
+            // var quantidadePLinha = "col s" + this.props.quantidadeRow + " m" + this.props.quantidadeRow;
         return(
-            <div className="row">
-                <Conteudo conteudos={conteudos}/> 
-                <Conteudo conteudos={conteudos}/> 
-                <Conteudo conteudos={conteudos}/> 
+            <div>
+                <div className="row">
+                    {/* <Conteudo conteudos={conteudos}/> 
+                    <Conteudo conteudos={conteudos}/>  */}
+                   
+                    <Conteudo conteudos={conteudos}/> 
+                </div>
             </div>
         )
     }

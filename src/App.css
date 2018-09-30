@@ -40,3 +40,10 @@ h1{
 .linhaConteudo{
   display: inline-block;
 }
+
+.pagina_central{
+  background-color: #1f2729;
+}
+.imagem_banner{
+  padding-top:10px;
+}

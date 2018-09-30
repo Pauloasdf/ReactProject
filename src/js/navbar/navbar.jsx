@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import NavMenu from './nav-menu';
 class Navbar extends React.Component{
     render(){
@@ -12,13 +12,23 @@ class Navbar extends React.Component{
 
         let corNavbar = "nav-wrapper "+ this.props.cor; 
         return( 
+        // <nav>
+        //     <div className={corNavbar}>
+        //         <div className="container">
+        //             <a href="#" className="brand-logo">{this.props.titulo}</a>
+        //             <NavMenu menu={menu}/>
+                    
+        //         </div>
+        //     </div>
+        // </nav>
+
         <nav>
             <div className={corNavbar}>
-                <div className="container">
+                
                     <a href="#" className="brand-logo">{this.props.titulo}</a>
                     <NavMenu menu={menu}/>
                     
-                </div>
+                
             </div>
         </nav>
         )
