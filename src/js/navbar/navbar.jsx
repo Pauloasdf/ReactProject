@@ -12,25 +12,25 @@ class Navbar extends React.Component{
 
         let corNavbar = "nav-wrapper "+ this.props.cor; 
         return( 
-        // <nav>
-        //     <div className={corNavbar}>
-        //         <div className="container">
-        //             <a href="#" className="brand-logo">{this.props.titulo}</a>
-        //             <NavMenu menu={menu}/>
-                    
-        //         </div>
-        //     </div>
-        // </nav>
-
         <nav>
             <div className={corNavbar}>
-                
+                <div className="container">
                     <a href="#" className="brand-logo">{this.props.titulo}</a>
                     <NavMenu menu={menu}/>
                     
-                
+                </div>
             </div>
         </nav>
+
+        // <nav>
+        //     <div className={corNavbar}>
+                
+        //             <a href="#" className="brand-logo">{this.props.titulo}</a>
+        //             <NavMenu menu={menu}/>
+                    
+                
+        //     </div>
+        // </nav>
         )
     }
 }
