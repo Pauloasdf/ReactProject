@@ -11,7 +11,7 @@ class BlocoConteudo extends React.Component{
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#3",alt:"",},
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#4",alt:"",},
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#5",alt:"",},
-                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#6",alt:"",},
+                {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#5",alt:"",},
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#7",alt:"",}
             ];
         

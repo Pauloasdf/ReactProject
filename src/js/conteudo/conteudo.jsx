@@ -9,10 +9,10 @@ render(){
           <div className="col s4 m4 conteudo">
             <div className="card z-depth-4">
               <div className="card-image">
-                <img src={value.img} alt={value.alt}/>
-                <span className="card-title">`{value.title}</span>
+                <a href={value.link}><img src={value.img} alt={value.alt}/></a>
               </div>
               <div className="card-content">
+              <span className="card-title"><b>{value.tituloBloco}</b></span>
                 <p>{value.texto}</p>
               </div>
               <div className="card-action">
