@@ -7,6 +7,7 @@ import Titulo from './js/titulo/titulo';
 import Navbar from './js/navbar/navbar';
 //import Head from './js/head/head';
 import Banner from './js/conteudo/banner';
+import Footer from './js/footer/footer'
 
 import BlocoConteudo from './js/conteudo/bloco-conteudo';
 
@@ -41,9 +42,9 @@ let App = (
           <div class="col s10 pagina_central">
           <Banner />
           <BlocoConteudo />
-          </div>
-    
+          </div> 
         </div>
+        <Footer cor="red"/>
   </div>
 );
 

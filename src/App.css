@@ -43,7 +43,45 @@ h1{
 
 .pagina_central{
   background-color: #1f2729;
+  margin-bottom: -20px;
 }
+
+
+
 .imagem_banner{
   padding-top:10px;
+}
+
+
+.icones-sociais{
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+
+.icones-sociais li {
+  display: inline-block;
+}
+
+.icones-sociais a {
+  width: 64px;
+  height: 64px;
+  display: block;
+  text-indent: -99999px;
+}
+
+.facebook {
+  background-image: url();
+}
+
+.github {
+  background-image: url();
+}
+
+.twitter {
+   background-image: url();
+}
+
+.linkedin {
+  background-image: url();
 }
