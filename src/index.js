@@ -3,40 +3,37 @@ import ReactDOM from 'react-dom';
 
 import './App.css';
 
+
+
+
+// PÁGINA
+
+//import Head from './js/head/head';
 import Titulo from './js/titulo/titulo';
 import Navbar from './js/navbar/navbar';
-//import Head from './js/head/head';
-import Banner from './js/conteudo/banner';
-import Footer from './js/footer/footer'
-
 import BlocoConteudo from './js/conteudo/bloco-conteudo';
+
+import Banner from './js/conteudo/banner';
+
+// import Banner2 from './js/conteudo/carousel'
+
+import Footer from './js/footer/footer';
+
+// BANCO
+// import INSERTconteudo from './js/conteudo/insert_conteudo';
 
 
 let App = (
         
-        // <div>
-         
-        //   <Navbar titulo="SyoLearn" cor="red" />
-        //   <div className="container">
-        //     <Titulo titulo="Home"/>
-
-            
-        //     <Banner />
-          
-        //     <BlocoConteudo />
-
-        //     </div>
-
-        //   </div>
-        
   <div>
         <Navbar titulo="SyoLearn" cor="red" />
+        
         {/* <Titulo titulo="Home"/> */}
         
         <div class="row">
     
           <div class="col s2">
-            
+          <menuAncora />
           </div>
     
           <div class="col s10 pagina_central">
@@ -46,6 +43,7 @@ let App = (
         </div>
         <Footer cor="red"/>
   </div>
+  
 );
 
 ReactDOM.render(App, document.getElementById('root'));

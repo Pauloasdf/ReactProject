@@ -2,8 +2,19 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 
 import Conteudo from './conteudo';
+import Busca from '../Busca/busca';
 
 class BlocoConteudo extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {busca: ''}
+        this.atualizaBusca = this.atualizaBusca.bind(this);
+    }
+
+    atualizaBusca(evento){
+        this.setState({busca: evento.target.value})
+    }
+
     render(){
         let conteudos = [
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#1",alt:"",},
@@ -40,6 +51,9 @@ class BlocoConteudo extends React.Component{
             // var quantidadePLinha = "col s" + this.props.quantidadeRow + " m" + this.props.quantidadeRow;
         return(
             <div>
+                <div className="row">
+                <Busca atualizaBusca={this.atualizaBusca} busca={this.state.busca}/>   
+                </div>
                 <div className="row">
                     {/* <Conteudo conteudos={conteudos}/> 
                     <Conteudo conteudos={conteudos}/>  */}
