@@ -15,7 +15,7 @@ class Navbar extends React.Component{
         <nav>
             <div className={corNavbar}>
                 <div className="container">
-                    <a href="#" className="brand-logo">{this.props.titulo}</a>
+                    <a href="#123" className="brand-logo">{this.props.titulo}</a>
                     <NavMenu menu={menu}/>
                     
                 </div>

@@ -2,10 +2,11 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 
 class Conteudo extends React.Component{
-render(){
+  render(
+    
+){
     let conteudo = this.props.conteudos.map(function(value){  
         return(
-          
           <div className="col s4 m4 conteudo">
             <div className="card z-depth-4">
               <div className="card-image">
@@ -19,12 +20,7 @@ render(){
                 
               </div>
             </div>
-          </div>
-
-            
-            
-             
-                        
+          </div>       
         );
     });
 

@@ -9,7 +9,7 @@ import './App.css';
 // PÁGINA
 
 //import Head from './js/head/head';
-import Titulo from './js/titulo/titulo';
+// import Titulo from './js/titulo/titulo';
 import Navbar from './js/navbar/navbar';
 import BlocoConteudo from './js/conteudo/bloco-conteudo';
 
@@ -30,13 +30,13 @@ let App = (
         
         {/* <Titulo titulo="Home"/> */}
         
-        <div class="row">
+        <div className="row">
     
-          <div class="col s2">
-          <menuAncora />
+          <div className="col s2">
+          {/* <menuAncora /> */}
           </div>
     
-          <div class="col s10 pagina_central">
+          <div className="col s10 pagina_central">
           <Banner />
           <BlocoConteudo />
           </div> 

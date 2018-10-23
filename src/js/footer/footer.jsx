@@ -13,31 +13,29 @@ class Footer extends React.Component{
                 <p className="grey-text text-lighten-4"> Esta página foi prodizida como um projeto de TCC.</p>
               </div>
               <div className="col l6 offset-l2 s12">
-                <h5 className="white-text"></h5>
-               
                 <nav>
-                    <ul class="icones-sociais">
+                    <ul className="icones-sociais">
                         <li>
-                            <a href="http://pt-br.facebook.com/webcodefree" class="facebook">
+                            <a href="http://pt-br.facebook.com/webcodefree" className="facebook">
                                 Facebook
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/" class="github">
+                            <a href="https://github.com/" className="github">
                                 Github
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/" class="twitter">
+                            <a href="https://twitter.com/" className="twitter">
                                 Twitter
                             </a>
                         </li>
                         <li>
-                            <a href="https://br.linkedin.com/in/pauloricardomarinho" class="linkedin">
+                            <a href="https://br.linkedin.com/in/pauloricardomarinho" className="linkedin">
                                 LinkedIn
                             </a>
                         </li><li>
-                            <a href="https://br.linkedin.com/in/pauloricardomarinho" class="linkedin">
+                            <a href="https://br.linkedin.com/in/pauloricardomarinho" className="linkedin">
                                 LinkedIn
                             </a>
                         </li>

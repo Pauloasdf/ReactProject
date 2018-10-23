@@ -11,10 +11,15 @@ class BlocoConteudo extends React.Component{
         this.atualizaBusca = this.atualizaBusca.bind(this);
     }
 
+    
+
     atualizaBusca(evento){
         this.setState({busca: evento.target.value})
     }
 
+    onSubmit(evento){   
+        console.log(this.state.busca);
+    }
     render(){
         let conteudos = [
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#1",alt:"",},
@@ -25,7 +30,14 @@ class BlocoConteudo extends React.Component{
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#5",alt:"",},
                 {img : "https://img.elo7.com.br/product/zoom/FBCE34/adesivo-paisagem-praia-decorando-com-adesivos.jpg",tituloBloco:"Primeiro teste",texto:"teste",link:"#7",alt:"",}
             ];
-        
+          //Keys
+
+          const keys_conteudos = conteudos.map((conteudos) =>
+            <li key={conteudos.toString()}>
+              {conteudos}
+            </li>
+          );
+
           // Declaração de variáveis 
 
             var auxiliar = [];
@@ -52,7 +64,7 @@ class BlocoConteudo extends React.Component{
         return(
             <div>
                 <div className="row">
-                <Busca atualizaBusca={this.atualizaBusca} busca={this.state.busca}/>   
+                <Busca atualizaBusca={this.atualizaBusca} onSubmit={this.onSubmit} busca={this.state.busca}/>   
                 </div>
                 <div className="row">
                     {/* <Conteudo conteudos={conteudos}/> 

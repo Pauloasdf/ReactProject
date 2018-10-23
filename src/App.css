@@ -97,4 +97,9 @@ h1{
 
 .span-input-label-pesquisa{
   color: #FFFFFF;
+  font-family: 'Righteous', cursive;
+}
+
+.botao-buscar{
+  width: 100%;
 }
