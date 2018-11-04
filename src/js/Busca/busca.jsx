@@ -13,6 +13,7 @@ class Busca extends React.Component{
 
     onSubmit(evento){
         this.props.onSubmit(evento);
+        evento.preventDefault();
     }
 
     render(){
@@ -20,7 +21,6 @@ class Busca extends React.Component{
 
         return(
             <form onSubmit={this.onSubmit}>
-                <br></br><br></br>
                 <div className="col s1"></div>
                 <div className="input-field col s10">
                     {/* <label>Busca</label> */}
@@ -31,8 +31,8 @@ class Busca extends React.Component{
                     <div className="col s4">
                     </div>
                         <div className="col s4">
-                                <center> <a className="waves-effect waves-light btn-large botao-buscar">Buscar</a></center>
-                        </div>
+                        <center><button type="submit" className="waves-effect waves-light btn-large botao-buscar"> Buscar </button></center>
+                        </div> 
                 </div>
             </form>
         )
