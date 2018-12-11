@@ -43,7 +43,7 @@ class BlocoConteudo extends React.Component{
         let dados =  this.state.servidor;
         console.log(dados);
         let novaLista = dados.filter(function(item){
-            if(item.tituloBloco.toUpperCase().indexOf(busca.toUpperCase())> -1){
+            if(item.tituloBloco.toUpperCase().indexOf(busca.toUpperCase())> -1 ){
                 return item;
             }
             if(busca === []){
