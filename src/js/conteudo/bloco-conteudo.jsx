@@ -18,6 +18,7 @@ class BlocoConteudo extends React.Component{
           .then(cartao => cartao.json())
           .then(data => {
               this.setState({ conteudos:data })
+              this.setState({ servidor:data })
               console.log(data)
             });
       }
@@ -30,17 +31,35 @@ class BlocoConteudo extends React.Component{
 
     atualizaBusca(evento){
         this.setState({busca: evento.target.value})
+        if(evento.target.value == "")
+            this.setState({dados: this.state.servidor})
     }
 
     onSubmit(evento){   
-        console.log(this.state.busca);
-        evento.proventDefaul(); 
+        
+        evento.preventDefault();
+
+        let busca = this.state.busca;
+        let dados =  this.state.servidor;
+        console.log(dados);
+        let novaLista = dados.filter(function(item){
+            if(item.tituloBloco.toUpperCase().indexOf(busca.toUpperCase())> -1){
+                return item;
+            }
+            if(busca === []){
+                return this.state.servidor;
+            }
+        });
+
+        this.setState({conteudos: novaLista})
+
     }
+
     render(){
  
         return(
             <div>
-                <div className="row">
+                <div className="row busca">
                 <Busca atualizaBusca={this.atualizaBusca} onSubmit={this.onSubmit} busca={this.state.busca}/>   
                 </div>
                 <div className="row">

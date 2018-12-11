@@ -6,6 +6,7 @@ import Navbar from './js/navbar/navbar';
 import BlocoConteudo from './js/conteudo/bloco-conteudo';
 import DemoCarousel from './js/conteudo/carousel'
 import Footer from './js/footer/footer';
+import Sidemenu from './js/conteudo/menu-ancora';
 
 
 let App = (
@@ -14,17 +15,19 @@ let App = (
         <Navbar titulo="SyoLearn" cor="red" />
         
         <div className="row ">
-        <DemoCarousel />
-          <div className="col s2 menu_ancora">
-          {/* <menuAncora /> */}
-          </div>
-    
-          <div className="col s10 pagina_central">
-          
+      
+          <div className="col s9 pagina_central"> 
+          <DemoCarousel />
           <BlocoConteudo />
           </div> 
+          <div className="col s3 menu_ancora">
+          <Sidemenu />
+          </div>
+
         </div>
+        <div className="col s12">
         <Footer cor="red"/>
+        </div>
   </div>
   
 );

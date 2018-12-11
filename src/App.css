@@ -29,7 +29,7 @@
 
 body{
   height: 700px;
-  background-color: #1f2729;
+  background-color: #191919;
 }
 /*
 h1{
@@ -42,7 +42,7 @@ h1{
 }
 
 .pagina_central{
-  background-color: #1f2729;
+  background-color: #191919 ;
   margin-bottom: -20px;
 }
 
@@ -91,6 +91,9 @@ h1{
   margin-top: 50px;
 }
 
+.input-field{
+  margin-top:60px;
+}
 .input-field label {
   color:#FFFFFF;
 }
@@ -107,13 +110,44 @@ h1{
 .carousel{
   width: 100%;
   height: 500px;
+  /* left:-12px; */
+  margin-top: 10px;
 }
 
 .menu_ancora{
-  background-color: #F5F5F5;
-  height: 570px;
+  background-color: #414141;
+  height: 1100PX;
+  margin-top:10px;
+
+  
 }
 
-.footer{
-  margin-top:-18px;
+/* .footer{
+  position: absolute; 
+} */
+
+  .imagem-logo{
+    height:50px;
+    padding-top:15px;
+    margin-right: 5px;
+  }
+
+  /* .busca{
+    background-color: #191919;
+  } */
+
+  .texto-sidemenu{
+    color: #FFFFFF;
+    font-family: 'Righteous', cursive;
+    size: 10px;  
+  }
+  
+  h5{
+    color:#f5f5f5;
 }
+  h4{
+  color:#f5f5f5;
+}
+  p{
+  color:#f5f5f5;
+  }
