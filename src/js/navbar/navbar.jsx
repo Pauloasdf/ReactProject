@@ -3,10 +3,10 @@ import NavMenu from './nav-menu';
 class Navbar extends React.Component{
     render(){
         let menu = [
-            {titulo:"Conceitos Iniciais", link:"#conceitos"},
-            {titulo:"Empresa", link:"#empresa"},
-            {titulo:"Módulos", link:"#modelos"},
-            {titulo:"O que fazer?", link:"#search"},
+            {titulo:"Conceitos Iniciais", link:"?modulo=conceitos"},
+            {titulo:"Empresa", link:"?modulo=empresa"},
+            {titulo:"Módulos", link:"?modulo=modelos"},
+            {titulo:"O que fazer?", link:"?modulo=search"},
         ];
 
         let corNavbar = "nav-wrapper "+ this.props.cor; 
