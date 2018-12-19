@@ -1,36 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route } from 'react-router';
+import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom';
 
 import './App.css';
-import Navbar from './js/navbar/navbar';
-import BlocoConteudo from './js/conteudo/bloco-conteudo';
-import DemoCarousel from './js/conteudo/carousel'
-import Footer from './js/footer/footer';
-import Sidemenu from './js/conteudo/menu-ancora';
 
+// Router components
+import App from './pages/App';
+import PaginaConteudo from './pages/paginaconteudo';
+import Empresa from './pages/empresa';
+import Modulos from './pages/modulos';
+import Base from './pages/base';
+import Home from './pages/Home'
 
-let App = (
-        
-  <div>
-        <Navbar titulo="SyoLearn" cor="red" />
-        
-        <div className="row ">
-      
-          <div className="col s9 pagina_central"> 
-          <DemoCarousel />
-          <BlocoConteudo />
-          </div> 
-          <div className="col s3 menu_ancora">
-          <Sidemenu />
-          </div>
-
-        </div>
-        <div className="col s12">
-        <Footer cor="red"/>
-        </div>
-  </div>
+ReactDOM.render((
   
-);
-
-ReactDOM.render(App, document.getElementById('root'));
+  <Router history={HashRouter}>
+    <Home>
+        <Route exact={true} path="/App" component={App}/>
+        <Route path="/paginaconteudo" component={PaginaConteudo}/>
+        <Route path="/empresa" component={Empresa}/>
+        <Route path="/modulos" component={Modulos}/>
+        <Route path="/base" component={Base}/>
+    </Home>
+  </Router>
+  
+  ), document.getElementById('root'));

@@ -16,8 +16,6 @@ export default class App extends React.Component{
 
     render() {
         return(      
-                <div>
-                    <Navbar titulo="SyoLearn" cor="red" />         
                     <div className="row ">
                         <div className="col s9 pagina_central"> 
                             <DemoCarousel />
@@ -27,10 +25,6 @@ export default class App extends React.Component{
                             <Sidemenu />
                         </div>
                     </div>
-                    <div className="col s12">
-                        <Footer cor="red"/>
-                    </div>
-                </div>                
               )
              }
 }
