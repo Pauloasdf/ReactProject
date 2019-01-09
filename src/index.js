@@ -16,7 +16,7 @@ ReactDOM.render((
   
   <Router history={HashRouter}>
     <Home>
-        <Route exact={true} path="/App" component={App}/>
+        <Route exact={true} path="/" component={App}/>
         <Route path="/paginaconteudo" component={PaginaConteudo}/>
         <Route path="/empresa" component={Empresa}/>
         <Route path="/modulos" component={Modulos}/>
