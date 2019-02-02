@@ -11,6 +11,7 @@ import Empresa from './pages/empresa';
 import Modulos from './pages/modulos';
 import Base from './pages/base';
 import Home from './pages/Home'
+import InserirConteudo from './pages/Inserirconteudo'
 
 ReactDOM.render((
   
@@ -22,6 +23,7 @@ ReactDOM.render((
             <Route path="/empresa" component={Empresa}/>
             <Route path="/modulos" component={Modulos}/>
             <Route path="/base" component={Base}/>
+            <Route path="/insert" component={InserirConteudo}/>
       </Switch>
     </Home>
   </BrowserRouter>
