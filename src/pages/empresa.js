@@ -1,10 +1,6 @@
 import React from 'react';
 
 export default class Empresa extends React.Component{
-    constructor(){
-        super();
-    }
-
     render() {
         return(      
                     <div className="row ">

@@ -9,12 +9,12 @@ class Sidemenu extends React.Component{
                     <h3>Recentes</h3>
                     <div className='divider'></div>
                 <div>
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img src="https://lorempixel.com/120/120/nature/6" />
+                    <div className="card horizontal">
+                        <div className="card-image">
+                            <img src="https://lorempixel.com/120/120/nature/6" alt="imagem nao encontrada."/>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
+                        <div className="card-stacked">
+                            <div className="card-content">
                             I am a very simple card. I am good at containing small bits of information.
                             </div>
                         </div>

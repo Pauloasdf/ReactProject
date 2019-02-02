@@ -31,7 +31,7 @@ class BlocoConteudo extends React.Component{
 
     atualizaBusca(evento){
         this.setState({busca: evento.target.value})
-        if(evento.target.value == "")
+        if(evento.target.value === "")
             this.setState({dados: this.state.servidor})
     }
 
@@ -49,6 +49,7 @@ class BlocoConteudo extends React.Component{
             if(busca === []){
                 return this.state.servidor;
             }
+            return '';
         });
 
         this.setState({conteudos: novaLista})
@@ -63,7 +64,6 @@ class BlocoConteudo extends React.Component{
                 <Busca atualizaBusca={this.atualizaBusca} onSubmit={this.onSubmit} busca={this.state.busca}/>   
                 </div>
                 <div className="row">
-
                     <Conteudo conteudos={this.state.conteudos}/> 
                 </div>
             </div>

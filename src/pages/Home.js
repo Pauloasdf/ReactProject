@@ -3,10 +3,6 @@ import Navbar from '../js/navbar/navbar';
 import Footer from '../js/footer/footer';
 
 export default class Home extends React.Component{
-    constructor(){
-        super();
-    }
-
     render() {
         return(      
             <div>

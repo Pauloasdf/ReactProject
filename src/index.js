@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Route, HashRouter, Switch  } from 'react-router-dom';
 
 import './App.css';
 
@@ -14,14 +14,16 @@ import Home from './pages/Home'
 
 ReactDOM.render((
   
-  <Router history={HashRouter}>
+  <BrowserRouter history={HashRouter}>
     <Home>
-        <Route exact={true} path="/" component={App}/>
-        <Route path="/paginaconteudo" component={PaginaConteudo}/>
-        <Route path="/empresa" component={Empresa}/>
-        <Route path="/modulos" component={Modulos}/>
-        <Route path="/base" component={Base}/>
+      <Switch>
+            <Route exact={true} path="/" component={App}/>
+            <Route path="/paginaconteudo" component={PaginaConteudo}/>
+            <Route path="/empresa" component={Empresa}/>
+            <Route path="/modulos" component={Modulos}/>
+            <Route path="/base" component={Base}/>
+      </Switch>
     </Home>
-  </Router>
+  </BrowserRouter>
   
   ), document.getElementById('root'));
