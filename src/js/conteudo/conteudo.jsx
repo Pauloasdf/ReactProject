@@ -8,10 +8,9 @@ class Conteudo extends React.Component{
 
 
     const conteudo = this.props.conteudos.map(function(value,i){  
-     const valor = value;
         return(
-          <a href={'content?id=' + value.id}>
-          <div className="col s4 m4 conteudo" key={i}>
+          <a href={'content?id=' + value.id} key={i}>
+          <div className="col s4 m4 conteudo">
             <div className="card z-depth-4">
               <div className="card-image">
                 <img src={value.img} alt={value.alt}/>

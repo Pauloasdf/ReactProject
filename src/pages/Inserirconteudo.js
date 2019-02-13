@@ -15,37 +15,42 @@ export default class InserirConteudo extends React.Component {
 
   }
 
+
+  
   handleInputChange(event) {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
-console.log(name, value);
     this.setState({
       [name]: value
     });
   }
 
   handleSubmit = event => {
+    const form = this.state;
+    fetch('http://localhost:2000/form', {
+      method: "POST", 
+      mode: "cors", 
+      cache: "no-cache", 
+      credentials: "same-origin", 
+      headers: {
+          "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrer: "no-referrer",
+      body: JSON.stringify(form), 
+  })
+
     event.preventDefault();
 
-    const form = this.state;
-
-    axios.post(`http://localhost:2000/form`, { form })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
-      .catch(error => {
-          console.log(error.response)
-      })
-      console.log(this.state)
-  }
+     
+}
 
   
 
   render() {
     return (
-      <form action="http://localhost:2000/form" method="post" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <label>
           TITULO
           <input
