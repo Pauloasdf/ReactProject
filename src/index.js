@@ -12,6 +12,10 @@ import Modulos from './pages/modulos';
 import Base from './pages/base';
 import Home from './pages/Home'
 import InserirConteudo from './pages/Inserirconteudo'
+import Redux from './redux/redux'
+// import ContentLoad from './pages/content';
+import ContentFilter from './pages/content-filter';
+// import Destructuring from './redux/destructuring'
 
 ReactDOM.render((
   
@@ -24,6 +28,8 @@ ReactDOM.render((
             <Route path="/modulos" component={Modulos}/>
             <Route path="/base" component={Base}/>
             <Route path="/insert" component={InserirConteudo}/>
+            <Route path="/redux" component={Redux}/>
+            <Route path="/content" component={ContentFilter}/>
       </Switch>
     </Home>
   </BrowserRouter>

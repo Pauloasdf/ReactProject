@@ -47,6 +47,10 @@ h1{
 }
 
 
+.conteudo{
+  margin-bottom: -60px;
+}
+
 
 .imagem_banner{
   padding-top:10px;
@@ -122,9 +126,9 @@ h1{
   
 }
 
-/* .footer{
-  position: absolute; 
-} */
+.footer{
+  margin-top: 80px;
+}
 
   .imagem-logo{
     height:50px;
@@ -170,3 +174,29 @@ h1{
     margin-top:10px;
     
   }
+
+   .fixed{
+     position: relative;
+     width: 100%;
+     bottom: 0; 
+   }
+
+   .imagem-conteudo-unico{
+     height: 75%;
+     width: 75%;
+     
+   }
+
+   a{
+     color: #191919;
+   }
+
+   p{
+     margin-left: 10px;
+     margin-right:10px;
+   }
+
+   .imagem-cartao-pequena{
+     height: 100$;
+
+   }

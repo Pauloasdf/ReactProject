@@ -11,7 +11,7 @@ class BlocoConteudo extends React.Component{
         this.addClique = this.addClique.bind(this);
         this.atualizaBusca = this.atualizaBusca.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-      }
+    }
 
       componentDidMount() {
         fetch('http://localhost:2000/conteudos')
@@ -41,7 +41,6 @@ class BlocoConteudo extends React.Component{
 
         let busca = this.state.busca;
         let dados =  this.state.servidor;
-        console.log(dados);
         let novaLista = dados.filter(function(item){
             if(item.tituloBloco.toUpperCase().indexOf(busca.toUpperCase())> -1 ){
                 return item;

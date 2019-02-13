@@ -2,7 +2,7 @@ import React from 'react';
 
 class Footer extends React.Component{
     render(){
-    let corFooter = "page-footer footer nav-wrapper "+ this.props.cor; 
+    let corFooter = "page-footer footer nav-wrapper fixed "+ this.props.cor; 
     
         return(
                         <footer className={corFooter}>
