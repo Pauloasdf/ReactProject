@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "merge": "^1.2.1",
     "mysql": "github:mysqljs/mysql",
     "react": "^16.7.0",
     "react-dom": "^16.5.1",
@@ -18,5 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.14"
   }
 }
