@@ -65,6 +65,8 @@ class BlocoConteudo extends React.Component{
                 <div className="row">
                     <Conteudo conteudos={this.state.conteudos}/> 
                 </div>
+                <br></br><br></br>
+                
             </div>
         )
     }

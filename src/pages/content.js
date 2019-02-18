@@ -15,9 +15,11 @@ export default class ContentLoad extends React.Component{
                                 <br></br>
                                 <p>{this.props.texto}</p>
                                 <br></br>
+                                <center><a className="waves-effect waves-light btn-large blue botao-insert">Atualizar Conteudo</a></center>
                             </div>
                         </div> 
-                    </div>              )
+                    </div>              
+                    )
              }
 }
 

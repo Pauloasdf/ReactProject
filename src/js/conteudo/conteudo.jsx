@@ -1,6 +1,5 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import aaa from '../../img/download.png';
 
 class Conteudo extends React.Component{
   render(
