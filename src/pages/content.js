@@ -172,10 +172,10 @@ export default class ContentLoad extends React.Component{
                                 <br></br>
                                 <p>{this.props.texto}</p>
                                 <br></br>
-                               <center> <a className="waves-effect waves-light btn-large blue botao-update" onClick={this.toogleUpdate}>Atualizar Conteudo</a>
-                                <a className="waves-effect waves-light btn-large red botao-excluir" onClick={this.handleDelete}>Excluir</a></center>
+                               <center> <a className="waves-effect waves-light btn-large blue botao-update" onClick={this.toogleUpdate}>Atualizar Conteúdo</a>
+                                <a className="waves-effect waves-light btn-large red botao-excluir" onClick={this.handleDelete}>Excluir Conteúdo</a></center>
                             </div>
-                            <h5>Id: {this.props.id}</h5>
+                            {/* <h5>Id: {this.props.id}</h5> */}
                         </div> 
                         
                     </div>     

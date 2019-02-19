@@ -12,7 +12,7 @@ function abrirPagina(){
 export default class App extends React.Component{
     render() {
         return(      
-                    <div className="row ">
+                    <div className="row">
                         <div className="col s12 m9 l9 pagina_central"> 
                             <DemoCarousel />
                             <BlocoConteudo />

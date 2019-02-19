@@ -233,3 +233,14 @@ input{
   text-align: justify
 }
 
+.botao-update{
+ margin-right:5%;
+ margin-bottom:10px;
+ width: 300px;
+}
+
+.botao-excluir{
+  margin-right:5%;
+  margin-bottom:10px;
+  width: 300px;
+ }
