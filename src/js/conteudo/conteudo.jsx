@@ -1,17 +1,13 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
-import aaa from '../../img/download.png';
 
 class Conteudo extends React.Component{
   render(
 ){
-
-
-    const conteudo = this.props.conteudos.map(function(value,i){  
-     const valor = value;
+    const conteudos = this.props.conteudos
+    const conteudo = this.props.conteudos.map(function(value,i){ 
         return(
-          <a href={'content?id=' + value.id}>
-          <div className="col s4 m4 conteudo" key={i}>
+          <a href={'content?id=' + conteudos[i].id} key={i}>
+          <div className="col s4 m4 conteudo">
             <div className="card z-depth-4">
               <div className="card-image">
                 <img src={value.img} alt={value.alt}/>

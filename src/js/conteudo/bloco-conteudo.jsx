@@ -1,5 +1,4 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
 
 import Conteudo from './conteudo';
 import Busca from '../Busca/busca';
@@ -19,7 +18,6 @@ class BlocoConteudo extends React.Component{
           .then(data => {
               this.setState({ conteudos:data })
               this.setState({ servidor:data })
-              console.log(data)
             });
       }
 
@@ -65,6 +63,8 @@ class BlocoConteudo extends React.Component{
                 <div className="row">
                     <Conteudo conteudos={this.state.conteudos}/> 
                 </div>
+                <br></br><br></br>
+                
             </div>
         )
     }

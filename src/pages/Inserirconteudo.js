@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 export default class InserirConteudo extends React.Component {
   constructor(props) {
@@ -19,67 +18,99 @@ export default class InserirConteudo extends React.Component {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
-console.log(name, value);
     this.setState({
       [name]: value
     });
   }
 
   handleSubmit = event => {
-    event.preventDefault();
-
     const form = this.state;
+    fetch('http://localhost:2000/form', {
+      method: "POST", 
+      mode: "cors", 
+      cache: "no-cache", 
+      credentials: "same-origin", 
+      headers: {
+          "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrer: "no-referrer",
+      body: JSON.stringify(form), 
+  })
 
-    axios.post(`http://localhost:2000/form`, { form })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
-      .catch(error => {
-          console.log(error.response)
-      })
-      console.log(this.state)
-  }
+     event.preventDefault();
+
+     
+}
 
   
 
   render() {
     return (
-      <form action="http://localhost:2000/form" method="post" onSubmit={this.handleSubmit}>
-        <label>
-          TITULO
-          <input
-            name="titulo"
-            type="text"
-            placeholder ="Insira aqui o titulo do tópico"
-            checked={this.state.titulo}
-            onChange={this.handleInputChange} />
-        </label>
-        <br />
-        <label>
-          TEXTO
-          <input
-            name="texto"
-            type="text"
-            placeholder ="Insira aqui o seu texto"
-            value={this.state.texto}
-            onChange={this.handleInputChange} />
-        </label>
-        <label>
-          Imagem:
-          <input
-            name="imagem"
-            type="text"
-            placeholder ="Insira aqui o link para a imagem do tópico"
-            value={this.state.imagem}
-            onChange={this.handleInputChange} />
-        </label>
-        <input
-            name="submit"
-            type="submit"
-            value ="Enviar"
-        />
-      </form>
+      <div className="row row-inserir-conteudo">
+
+        <div className="divinvisivel">
+          <br></br><br></br>
+        </div>
+
+        <div className="col s1 m1 l1"></div>
+        <div className="col 10 m10 l5">
+        <center><h2>Inserir Novo Conteudo</h2></center><hr></hr><br></br>
+        
+
+        <form onSubmit={this.handleSubmit}><br></br>
+          <label>
+            TITULO
+            <input
+              className="input-inserir"
+              name="titulo"
+              type="text"
+              placeholder ="Insira aqui o titulo do tópico"
+              checked={this.state.titulo}
+              onChange={this.handleInputChange}
+              required />
+          </label>
+          <br />
+          <label>
+            TEXTO
+            <input
+              className="input-inserir"
+              name="texto"
+              type="text"
+              placeholder ="Insira aqui o seu texto"
+              value={this.state.texto}
+              onChange={this.handleInputChange} 
+              required/>
+          </label>
+          <label>
+            Imagem:
+            <input
+              className="input-inserir"
+              name="imagem"
+              type="text"
+              placeholder ="Insira aqui o link para a imagem do tópico"
+              value={this.state.imagem}
+              onChange={this.handleInputChange} 
+              required/>
+          </label>
+          
+          <br></br>
+          <br></br>
+          <center><input
+              className="waves-effect waves-light btn-large blue botao-insert"
+              name="submit"
+              type="submit"
+              value ="Enviar"
+          />
+          </center>
+        </form>
+        
+        <div className="divinvisivel">
+          <br></br><br></br><br></br>
+        </div>
+        </div>
+        
+      </div>
     );
   }
 }
