@@ -224,3 +224,12 @@ h2{
 input{
   color: white
 }
+
+.input-insert-textarea{
+  font-family: 'Righteous', cursive;
+  color:#FFFFFF;
+  height: 500px;
+  background-color: transparent;
+  text-align: justify
+}
+

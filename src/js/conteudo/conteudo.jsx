@@ -1,14 +1,12 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
 
 class Conteudo extends React.Component{
   render(
 ){
-
-
-    const conteudo = this.props.conteudos.map(function(value,i){  
+    const conteudos = this.props.conteudos
+    const conteudo = this.props.conteudos.map(function(value,i){ 
         return(
-          <a href={'content?id=' + value.id} key={i}>
+          <a href={'content?id=' + conteudos[i].id} key={i}>
           <div className="col s4 m4 conteudo">
             <div className="card z-depth-4">
               <div className="card-image">
