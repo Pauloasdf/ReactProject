@@ -6,19 +6,27 @@ export default class loginUser extends React.Component{
         super(props);
         this.state = {
                 usuarios:{},
+                emailLogin:'',
+                passLogin:''
         };
         this.handleSubmitLogin = this.handleSubmitLogin.bind(this);
         this.handleInputChangeSignUp = this.handleInputChangeSignUp.bind(this);
         this.handleInputChangeLogin = this.handleInputChangeLogin.bind(this);
         this.handleSubmitSignUp = this.handleSubmitSignUp.bind(this);
+
+        if(sessionStorage.getItem('usuario') !== {} && sessionStorage.getItem('usuario') !== null){
+            document.location.href = 'http://localhost:3000/home'
+        }
       }
 
       //BUSCA PELO OBJETO DE USUÁRIOS CADASTRADOS
       componentDidMount(){
+
         fetch('http://localhost:2000/usuarios')
         .then(cartao => cartao.json())
         .then(data => {
             this.setState({ usuarios:data })
+            //console.log(this.state)
             });
       }
 
@@ -37,20 +45,18 @@ export default class loginUser extends React.Component{
             },
             redirect: "follow",
             referrer: "no-referrer",
-            body: JSON.stringify(login), }),
+            body: JSON.stringify(login)})
 
 
-         // k = 0;
-        //if (emailLogin !== '' && passLogin !== ''){         
-            fetch('http://localhost:2000/confirmaUser')
-                .then(cartao => cartao.json())
-                .then(confirmaUser => {
-                this.setState({ quantidade:confirmaUser })
-                console.log(this.state.quantidade)
-            });
-       //}
+        .then(data => data.json())
+        .then(data => window.sessionStorage.setItem('usuario',JSON.stringify(data)))
 
-      }
+        if(sessionStorage.getItem('usuario') !== {} && sessionStorage.getItem('usuario') !== null){
+            window.location.reload();
+        }
+
+        
+    }
 
 
       //CADASTRO E VALIDAÇÕES DE USUÁRIO ÚNICO
@@ -81,14 +87,16 @@ export default class loginUser extends React.Component{
                                 },
                                 redirect: "follow",
                                 referrer: "no-referrer",
-                                body: JSON.stringify(user), 
+                                body: JSON.stringify(user)
                 })
+
                         }else{
                             alert('Endereço de E-mail já utilizado por outra conta')
                         }           
         }else{
             alert('Por favor, há campos sem preenchimento!!')
         };
+
     }
 
 
@@ -97,8 +105,8 @@ export default class loginUser extends React.Component{
         const value = target.value;
         const loginUsuario = target.name;
         this.setState({
-        [loginUsuario]: value,
-        });   
+        [loginUsuario]: value
+        })
 }
 
 

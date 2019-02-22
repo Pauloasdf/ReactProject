@@ -46,6 +46,11 @@ export default class InserirConteudo extends React.Component {
   
 
   render() {
+
+    if(sessionStorage.getItem('usuario') === {} || sessionStorage.getItem('usuario') === null){
+      document.location.href = 'http://localhost:3000/newUser'
+  }
+  
     return (
       <div className="row row-inserir-conteudo">
 

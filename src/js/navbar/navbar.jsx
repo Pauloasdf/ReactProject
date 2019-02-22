@@ -3,7 +3,7 @@ import NavMenu from './nav-menu';
 class Navbar extends React.Component{
     render(){
         let menu = [
-            {titulo:"Home", link:"http://localhost:3000/"},
+            {titulo:"Home", link:"http://localhost:3000/home"},
             {titulo:"Empresa", link:"http://localhost:3000/empresa"},
             // {titulo:"Módulos", link:"http://localhost:3000/modulos"},
             // {titulo:"Conceitos", link:"http://localhost:3000/base"},

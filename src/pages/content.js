@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 
 export default class ContentLoad extends React.Component{
     constructor(props) {
@@ -78,6 +78,12 @@ export default class ContentLoad extends React.Component{
 
 
     render(){
+        
+        if(sessionStorage.getItem('usuario') === {} || sessionStorage.getItem('usuario') === null){
+            document.location.href = 'http://localhost:3000/newUser'
+        }
+  
+        
         this.state.id = this.props.id
         switch(this.state.modo){
             case 'UPDATE':
@@ -172,8 +178,12 @@ export default class ContentLoad extends React.Component{
                                 <br></br>
                                 <p>{this.props.texto}</p>
                                 <br></br>
+                                { JSON.parse(sessionStorage.getItem('usuario')).tipo_usuario == "admin" &&
+                                <Fragment>
                                <center> <a className="waves-effect waves-light btn-large blue botao-update" onClick={this.toogleUpdate}>Atualizar Conteúdo</a>
                                 <a className="waves-effect waves-light btn-large red botao-excluir" onClick={this.handleDelete}>Excluir Conteúdo</a></center>
+                                </Fragment>
+                                }
                             </div>
                             {/* <h5>Id: {this.props.id}</h5> */}
                         </div> 

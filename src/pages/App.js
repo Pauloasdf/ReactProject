@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react'
+
 
 // COMPONENTES
 import '../App.css';
@@ -23,6 +24,9 @@ export default class App extends React.Component{
                         <div className="row">
                             <div className="col s12 m12 l12">
                                 <div className="texto-inserir">
+
+                                { JSON.parse(sessionStorage.getItem('usuario')).tipo_usuario === "admin" &&
+                                <Fragment>
                                     <div className="col s9 m9 l9">
                                     <br></br><br></br>
                                         <h5>Não encontrou o que procurava?<br></br>
@@ -31,7 +35,11 @@ export default class App extends React.Component{
                                     <div className="col s3 m3 l3">
                                     <br></br><br></br><br></br>
                                         <a className="waves-effect waves-light btn-large blue" onClick={abrirPagina}>Inserir</a>
-                                    </div>
+                                    </div> 
+                                </Fragment>
+                                }
+
+
                                 </div>
                             </div>
                         </div>

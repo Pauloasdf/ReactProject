@@ -1,7 +1,13 @@
 import React from 'react';
 
 export default class Empresa extends React.Component{
+    
     render() {
+
+        if(sessionStorage.getItem('usuario') === {} || sessionStorage.getItem('usuario') === null){
+            document.location.href = 'http://localhost:3000/newUser'
+        }
+
         return(      
                     <div className="row ">
                         <div className="col s2 menu_ancora">
