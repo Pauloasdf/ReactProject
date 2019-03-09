@@ -10,12 +10,8 @@ export default class Empresa extends React.Component{
 
         return(      
                     <div className="row ">
-                        <div className="col s2 menu_ancora">
-                            <h1>Menu</h1>
-                        </div>
-                        <div className="col s10 pagina_central"> 
-                            <div className="col s1"></div>
-                            <div className="col s10">
+                            <div className="col s2"></div>
+                            <div className="col s8">
                                 <center><h1>A Syonet</h1></center>
                                 <hr></hr><br></br>
                                 <p> Donec commodo lacinia massa, in mattis ex cursus sit amet. Phasellus laoreet a risus quis gravida. Etiam at ipsum auctor, sodales ligula sit amet, malesuada ante. Duis rhoncus ipsum at felis mattis, vehicula dignissim est tincidunt. Mauris auctor, leo vitae tincidunt suscipit, dui dolor rutrum erat, ut varius orci nulla sed orci. Maecenas ut iaculis sem, quis aliquet nisi. Nulla commodo quam et metus dapibus pharetra vel nec nisi. Sed eleifend sit amet nisi bibendum interdum. Donec nec risus feugiat, dapibus neque eget, dictum ante. Proin sapien orci, facilisis in leo a, eleifend fringilla mi. Duis id odio leo. Quisque vehicula quam sit amet maximus faucibus. Aliquam lobortis accumsan justo, ut varius lorem egestas ut. </p>
@@ -25,7 +21,9 @@ export default class Empresa extends React.Component{
                                 <p> Aliquam bibendum varius dolor, in ultricies neque ultrices sit amet. Proin porttitor efficitur mauris, dictum tincidunt nisl efficitur quis. In nec laoreet libero, nec faucibus nibh. Nunc volutpat felis ac fermentum venenatis. Praesent lobortis rhoncus diam. Pellentesque interdum, erat semper lacinia euismod, mi velit rhoncus purus, vitae accumsan mi nisl nec ligula. Phasellus mattis efficitur aliquam. Sed efficitur sagittis leo eget vehicula. Nulla ac justo nec tellus mollis auctor. Integer non est ut sapien hendrerit hendrerit sed sit amet augue. Nullam dapibus ornare velit non sagittis. Suspendisse ipsum mauris, maximus eget porta hendrerit, facilisis vel lorem. Phasellus rutrum posuere odio quis facilisis. </p>
                                 
                             </div>
+                            <div className="col s2"></div>
+
                         </div> 
-                    </div>              )
+                     )
              }
 }
