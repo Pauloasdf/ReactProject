@@ -8,46 +8,49 @@ class Footer extends React.Component{
                         <footer className={corFooter}>
                     <div className="container">
                         <div className="row">
-                        <div className="col s12">
-                            <h5 className="white-text">   </h5>
-                            <p className="grey-text text-lighten-4"> Esta página foi prodizida como um projeto de TCC.</p>
+
+                        <div className="col s12 m6 l6 desabilitar-texto">
+                            <p className="grey-text text-lighten-4"> O SyoLearn foi produzido apenas como um trabalho de conclusão de curso, sem fins lucrativos. Sinta-se à vontade para visitar o autor em suas redes sociais.</p>
                         </div>
-                        <div className="col l6 offset-l2 s12">
-                            <nav>
-                                <ul className="icones-sociais">
-                                    <li>
-                                        <a href="http://pt-br.facebook.com/webcodefree" className="facebook">
-                                            Facebook
+
+                        <center>
+                            <div className="col s12 m6 l6 box">
+                            {/* <nav>
+                                <ul className="adaptavel-box">
+                                    <li className="facebook"> */}
+                                        <a href="https://www.facebook.com/pauloasdf.pires" className="facebook">
+                                        <img src="https://i.pinimg.com/originals/9b/be/be/9bbebe7aec597334e7d5ffeb6d735e9b.png" className="imagem-footer"></img>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/" className="github">
-                                            Github
+                                    {/* </li>
+                                    <li> */}
+                                        <a href="https://github.com/Pauloasdf" className="github">
+                                        <img src="https://www.shareicon.net/download/2015/09/02/94536_mark.ico" className="imagem-footer"></img>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" className="twitter">
-                                            Twitter
+                                    {/* </li>
+                                    <li> */}
+                                        <a href="https://twitter.com/paulopiresavila" className="twitter">
+                                        <img src="https://africatechreport.com/wp-content/uploads/2018/06/twitter_PNG1.png" className="imagem-footer twitter"></img>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://br.linkedin.com/in/pauloricardomarinho" className="linkedin">
-                                            LinkedIn
+                                    {/* </li>
+                                    <li> */}
+                                        <a href="https://www.linkedin.com/in/paulo-pires-de-avila-960a7a170/" className="linkedin">
+                                        <img src="https://image.flaticon.com/icons/png/512/61/61109.png" className="imagem-footer"></img>
                                         </a>
-                                    </li><li>
-                                        <a href="https://br.linkedin.com/in/pauloricardomarinho" className="linkedin">
-                                            LinkedIn
+                                    {/* </li><li> */}
+                                        <a href="https://www.instagram.com/paul_4pires" className="instagram">
+                                        <img src="http://www.logospng.com/images/116/12-black-instagram-logo-small-icon-images-116001.png" className="imagem-footer"></img>
                                         </a>
-                                    </li>
+                                    {/* </li>
                                 </ul>
-                            </nav>
+                            </nav> */}
                             
                         </div>
+                        </center>
                         </div>
                     </div>
                     <div className="footer-copyright">
                         <div className="container">
-                        © 2018 Paulo Pires de Avila
+                        © 2018-2019 Paulo Pires de Avila
                         </div>
                     </div>
                     </footer>

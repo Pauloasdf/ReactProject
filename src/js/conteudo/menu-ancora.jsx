@@ -1,26 +1,30 @@
 import React from 'react';
 
 class Sidemenu extends React.Component{
-    
+    constructor(props){
+        super(props);
+    }
+
     render(){
 
+    const menuconteudos = this.props.novosconteudos;
+    const menuconteudo = this.props.novosconteudos.map(function(value,id){ 
         return(
-            <div>
-                    <h3>Recentes</h3>
-                    <div className='divider'></div>
-                <div>
-                    <div className="card horizontal">
-                        <div className="card-image">
-                            <img src="https://lorempixel.com/120/120/nature/6" alt="imagem nao encontrada."/>
-                        </div>
-                        <div className="card-stacked">
-                            <div className="card-content">
-                            I am a very simple card. I am good at containing small bits of information.
-                            </div>
-                        </div>
+            <a href={'content?id=' + value.id} key={id}>
+                    <div className="card horizontal sideconteudohover">
+                        {/* <div className="card-image">
+                            <img src={value.img} alt={value.alt}/>
+                        </div> */}
+                        {/* <div className="card-stacked"> */}
+                            <div className="card-content">{value.tituloBloco}</div>
+                        {/* </div> */}
                     </div>
-            </div>
-            </div>
+            </a>
+        )
+    })
+
+        return(
+        [menuconteudo]
         )
     }   
 }

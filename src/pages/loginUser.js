@@ -33,6 +33,7 @@ export default class loginUser extends React.Component{
       // LOGIN NO SISTEMA
       handleSubmitLogin(){
 
+            console.log('Funcionou')
         const login = this.state
 
         fetch('http://localhost:2000/confirmaUser', {
@@ -129,7 +130,7 @@ export default class loginUser extends React.Component{
                             <div className="col s10">
                             <center><h1>Bem-Vindo!</h1></center>
                             <hr></hr><br></br>
-                                <div className="col s6 m6 l6">
+                                <div className="col s12 m6 l6">
                                 <p> Já possuo um cadastro   ; )</p>
                                 
                                     <form onSubmit={this.handleSubmitLogin}>
@@ -155,7 +156,7 @@ export default class loginUser extends React.Component{
                                     </form>
 
                                 </div>
-                                <div className="col s6 m6 l6">
+                                <div className="col s12 m6 l6">
                                 <p> Quero me cadastrar!</p>
 
                                     <form onSubmit={this.handleSubmitSignUp}>

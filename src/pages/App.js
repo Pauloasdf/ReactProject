@@ -11,6 +11,20 @@ function abrirPagina(){
     window.open('http://localhost:3000/insert')
 }
 export default class App extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {novosconteudos: []};
+    }
+
+    //Busca de conteúdos recentes
+    componentDidMount() {
+        fetch('http://localhost:2000/conteudos')
+          .then(cartao => cartao.json())
+          .then(data => {
+              this.setState({ novosconteudos:data })
+            });
+      }
+
     render() {
         return(      
                     <div className="row">
@@ -19,7 +33,9 @@ export default class App extends React.Component{
                             <BlocoConteudo />
                         </div> 
                         <div className="col s3 menu_ancora menulateraldireito">
-                            <Sidemenu />
+                            <h3>Recentes</h3>
+                            <hr></hr>
+                            <Sidemenu novosconteudos={this.state.novosconteudos}/>
                         </div>
                         <div className="row">
                             <div className="col s12 m12 l12">
@@ -32,9 +48,9 @@ export default class App extends React.Component{
                                         <h5>Não encontrou o que procurava?<br></br>
                                         Ajude-nos a expandir a base inserindo um novo tópico :)</h5>
                                     </div>
-                                    <div className="col s3 m3 l3">
+                                    <div className="col s12 m12 l3">
                                     <br></br><br></br><br></br>
-                                        <a className="waves-effect waves-light btn-large blue" onClick={abrirPagina}>Inserir</a>
+                                        <a className="waves-effect waves-light btn-large blue botaoinserirconteudo" onClick={abrirPagina}>Inserir</a>
                                     </div> 
                                 </Fragment>
                                 }

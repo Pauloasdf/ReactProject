@@ -32,7 +32,6 @@ export default class ContentLoad extends React.Component{
         });
       }
 
-
       handleSubmit = event => {
         const att = this.state;
         fetch('http://localhost:2000/update', {
@@ -48,7 +47,6 @@ export default class ContentLoad extends React.Component{
           body: JSON.stringify(att), 
       })
       this.setState({modo:"MOSTRAR"}); 
-      window.location.reload();
     }
 
     handleDelete(){
@@ -72,10 +70,8 @@ export default class ContentLoad extends React.Component{
                 else
                 {
                     this.setState({modo:"MOSTRAR"}); 
-                    window.location.reload();
                 }
             }
-
 
     render(){
         
