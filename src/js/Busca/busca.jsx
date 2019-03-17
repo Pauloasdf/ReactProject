@@ -17,8 +17,7 @@ class Busca extends React.Component{
     onSubmit(evento){
         this.props.onSubmit(evento);
         evento.preventDefault();
-    }
-
+}
     render(){
 
 
@@ -27,7 +26,7 @@ class Busca extends React.Component{
                 <div className="col s2"></div>
                 <div className="input-field col s8">
                     {/* <label>Busca</label> */}
-                    <input placeholder="Digite a sua Busca" type="text" value={this.props.busca} onChange={this.atualizaBusca} className="span-input-label-pesquisa"/> 
+                    <input placeholder="Digite a sua Busca" id="campobusca" type="text" value={this.props.busca} onChange={this.atualizaBusca} className="span-input-label-pesquisa"/> 
                    
                 </div>
                 <div className="col s1">

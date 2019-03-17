@@ -27,7 +27,7 @@ class BlocoConteudo extends React.Component{
         }));
       }
 
-    atualizaBusca(evento){
+      atualizaBusca(evento){
         this.setState({busca: evento.target.value})
         if(evento.target.value === "")
             this.setState({dados: this.state.servidor})
@@ -51,7 +51,7 @@ class BlocoConteudo extends React.Component{
 
         this.setState({conteudos: novaLista})
 
-    }
+}
 
     render(){
  
@@ -66,7 +66,7 @@ class BlocoConteudo extends React.Component{
                 <br></br><br></br>
                 
             </div>
-        )
+        ) 
     }
 }
 
