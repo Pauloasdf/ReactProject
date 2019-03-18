@@ -47,6 +47,13 @@ export default class ContentLoad extends React.Component{
           body: JSON.stringify(att), 
       })
       this.setState({modo:"MOSTRAR"}); 
+      let resposta = window.confirm("Tem certeza que deseja atualizar este conteúdo?");
+                if (resposta===true)
+                {
+                    document.location.href = 'http://localhost:3000/home';
+                }else{
+                    document.location.href = 'http://localhost:3000/home';
+                }
     }
 
     handleDelete(){
@@ -71,6 +78,7 @@ export default class ContentLoad extends React.Component{
                 {
                     this.setState({modo:"MOSTRAR"}); 
                 }
+                document.location.href = 'http://localhost:3000/home';
             }
 
     render(){
