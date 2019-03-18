@@ -37,10 +37,6 @@ export default class InserirConteudo extends React.Component {
       referrer: "no-referrer",
       body: JSON.stringify(form), 
   })
-
-     event.preventDefault();
-
-     
 }
 
   
